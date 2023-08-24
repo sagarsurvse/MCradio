@@ -7,6 +7,7 @@
   background-color: #111827;
 }
 
+
 .top-tab-navigation {
   display: flex;
   width: 80%;
@@ -81,7 +82,13 @@
   border-bottom: 2px solid transparent;
   transition: border-color 0.3s;
 }
-
+.top-right-button {
+  background-color: #2ecc71; /* Green color */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
 .tab.active {
   border-bottom-color: #007bff;
   font-weight: bold;
@@ -89,6 +96,69 @@
 
 .tab-content {
   height: 500px;
-  background-color: #030712;
+  background-color: white;
   margin-top: 16px;
 }
+
+/* Add this to your existing App.css */
+
+.group-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.group-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.group-details {
+  flex: 1;
+}
+
+.group-details h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.group-details p {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Add this to your existing CSS */
+
+.group-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Add this line */
+  margin-bottom: 10px;
+}
+
+.group-icon {
+  font-size: 24px;
+}
+
+.group-details {
+  display: flex;
+  align-items: center;
+}
+
+.group-info {
+  flex: 1;
+}
+
+.group-button-right {
+  margin-left: 10px;
+}
+.green-button {
+  background-color: #2ecc71; /* Green color */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+

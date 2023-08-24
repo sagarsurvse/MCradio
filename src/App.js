@@ -7,7 +7,26 @@ const Tab = ({ label, isActive, onClick }) => (
   </div>
 );
 
-const TabContent = ({ content }) => <div className="tab-content">{content}</div>;
+const TabContent = ({ content }) => (
+  <div className="tab-content">
+    {content.map((item, index) => (
+      <div key={index} className="group-item">
+        <div className="group-icon">👥</div>
+        <div className="group-details">
+          <div className="group-info">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        </div>
+        <div className="group-button-right">
+          <button className="green-button">Default Call</button>
+        </div>
+      </div>
+    ))}
+  </div>
+);
+
+
 
 const ListView = ({ items }) => (
   <div className="list-view">
@@ -37,6 +56,7 @@ const TopTabNavigation = ({ tabs, listItems }) => {
         <ListView items={listItems} />
       </div>
       <div className="right-content">
+        <button className="top-right-button">Button</button>
         <AppBar />
         <div className="tabs">
           {tabs.map((tab, index) => (
@@ -56,10 +76,26 @@ const TopTabNavigation = ({ tabs, listItems }) => {
 
 const App = () => {
   const tabs = [
-    { label: 'Groups', content: 'Content of groups' },
-    { label: 'Aliases', content: 'Content of Aliases' },
-    { label: 'Users', content: 'Content of Users' },
-    { label: 'Recent', content: 'Content of Recent' },
+    { label: 'Groups',  content: [
+      { title: 'Sample group name', description: 'Description of Group 1' },
+      { title: 'Sample group name', description: 'Description of Group 2' },
+      { title: 'Sample group name', description: 'Description of Group 3' },
+    ]},
+    { label: 'Aliases', content: [
+      { title: 'Sample group name', description: 'Description of Group 1' },
+      { title: 'Sample group name', description: 'Description of Group 2' },
+      { title: 'Sample group name', description: 'Description of Group 3' },
+    ] },
+    { label: 'Users', content: [
+      { title: 'Sample group name', description: 'Description of Group 1' },
+      { title: 'Sample group name', description: 'Description of Group 2' },
+      { title: 'Sample group name', description: 'Description of Group 3' },
+    ] },
+    { label: 'Recent', content: [
+      { title: 'Sample group name', description: 'Description of Group 1' },
+      { title: 'Sample group name', description: 'Description of Group 2' },
+      { title: 'Sample group name', description: 'Description of Group 3' },
+    ] },
   ];
 
   const listItems = [
