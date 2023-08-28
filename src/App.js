@@ -56,7 +56,7 @@ const TopTabNavigation = ({ tabs, listItems }) => {
         <ListView items={listItems} />
       </div>
       <div className="right-content">
-        <button className="top-right-button">Button</button>
+        <button className="top-right-button">SOS</button>
         <AppBar />
         <div className="tabs">
           {tabs.map((tab, index) => (
